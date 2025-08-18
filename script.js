@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     let scrollPosition = 0;
     let animationId;
-    const scrollSpeed = 0.7; // Speed in pixels per frame
+    const scrollSpeed = 1.5; // Speed in pixels per frame
     
     function autoScroll() {
         scrollPosition += scrollSpeed;
@@ -203,7 +203,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Scroll ANimations :
-
 const heroText = document.querySelector('.hero-text');
 const projectCards = document.querySelectorAll('.project-card');
 
