@@ -8,62 +8,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar functionality
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const navMenu = document.querySelector('.nav-menu');
-const hamburger = document.querySelector('.hamburger');
-let isMenuOpen = false;
-
-const toggleMenu = () => {
-    isMenuOpen = !isMenuOpen;
-    mobileMenuBtn.classList.toggle('active');
-    navMenu.classList.toggle('active');
-    hamburger.classList.toggle('active');
-    document.body.classList.toggle('menu-open');
-};
-
-mobileMenuBtn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    toggleMenu();
-});
-
-// Close menu when clicking outside
-document.addEventListener('click', (e) => {
-    if (isMenuOpen && !navMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
-        toggleMenu();
-    }
-});
-
-// Close menu when clicking on a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        if (isMenuOpen) {
-            toggleMenu();
-        }
-    });
-});
-
-// Navbar scroll effect
-let lastScrollY = window.scrollY;
-
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    const currentScrollY = window.scrollY;
-
-    if (currentScrollY > lastScrollY) {
-        navbar.style.transform = 'translateY(-100%)';
-    } else {
-        navbar.style.transform = 'translateY(0)';
-    }
-
-    if (currentScrollY > 50) {
-        navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-    } else {
-        navbar.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-    }
-
-    lastScrollY = currentScrollY;
-});
 
 // Animate elements on scroll
 const observerOptions = {
