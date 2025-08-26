@@ -147,25 +147,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // Scroll ANimations :
-const heroText = document.querySelector('.hero-text');
-const projectCards = document.querySelectorAll('.project-card');
+// const heroText = document.querySelector('.hero-text');
+// const projectCards = document.querySelectorAll('.project-card');
 
-const handleBio = (entries,observer)=>{
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add('heroTextAnimate');
-            observer.unobserve(entry.target);
-        }
-    });
-}
-const bioObserver = new IntersectionObserver(handleBio, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-});
+// const handleBio = (entries,observer)=>{
+//     entries.forEach(entry => {
+//         if(entry.isIntersecting){
+//             entry.target.classList.add('heroTextAnimate');
+//             observer.unobserve(entry.target);
+//         }
+//     });
+// }
+// const bioObserver = new IntersectionObserver(handleBio, {
+//     threshold: 0.1,
+//     rootMargin: '0px 0px -50px 0px'
+// });
 
-[heroText,...projectCards].forEach((el) => {
-    bioObserver.observe(el);
-});
+// [...projectCards].forEach((el) => {
+//     bioObserver.observe(el);
+// });
 
 
 
