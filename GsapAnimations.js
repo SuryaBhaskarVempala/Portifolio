@@ -137,45 +137,45 @@ gsap.from("#skills h2", {
     }
 });
 
-gsap.from(".skills-group.left", {
-    x: -100,
-    opacity: 0,
-    duration: 0.3,
-    scrollTrigger: {
-        trigger: ".skills-group.left",
-        start: "top 80%",
-        end: "bottom 130%",
-        // markers: true,
-        scrub: 2,
-
-    }
-});
-
-gsap.from(".skills-group.middle", {
+gsap.from(".skills-group", {
     y: 100,
     opacity: 0,
     duration: 0.3,
     scrollTrigger: {
-        trigger: ".skills-group.middle",
-        start: "top 80%",
-        end: "bottom 130%",
+        trigger: ".skills-group.left",
+        start: "top 90%",
+        end: "bottom 30%",
         // markers: true,
-        scrub: 2,
+        scrub: 1,
+
     }
 });
 
-gsap.from(".skills-group.right", {
-    x: 100,
-    opacity: 0,
-    duration: 0.3,
-    scrollTrigger: {
-        trigger: ".skills-group.right",
-        start: "top 80%",
-       end: "bottom 130%",
-        // markers: true,
-        scrub: 2,
-    }
-});
+// gsap.from(".skills-group.middle", {
+//     y: 100,
+//     opacity: 0,
+//     duration: 0.3,
+//     scrollTrigger: {
+//         trigger: ".skills-group.middle",
+//         start: "top 80%",
+//         end: "bottom 130%",
+//         // markers: true,
+//         scrub: 2,
+//     }
+// });
+
+// gsap.from(".skills-group.right", {
+//     x: 100,
+//     opacity: 0,
+//     duration: 0.3,
+//     scrollTrigger: {
+//         trigger: ".skills-group.right",
+//         start: "top 80%",
+//        end: "bottom 130%",
+//         // markers: true,
+//         scrub: 2,
+//     }
+// });
 
 
 // Projects Section Animations
