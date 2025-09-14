@@ -19,12 +19,15 @@ const tl = gsap.timeline({ paused: true, reversed: true });
 tl.fromTo(
     navLinks,
     {
-        x: 250,
+        opacity:0,
+        x:50,
+        delay:2
     },
     {
-        x: 0,
+        opacity: 1,
+        x:0,
         autoAlpha: 1,
-        stagger: 0.1,
+        stagger: 0.2,
         duration: 0.3,
         ease: "power2.inOut"
     }
@@ -101,20 +104,6 @@ window.addEventListener('scroll', () => {
 
 // GSAP ScrollTrigger animations
 
-// About Section Animations
-gsap.to("#about", {
-    y: 100,
-    opacity: 0,
-    duration: 0.5,
-    scrollTrigger: {
-        trigger: "#about",
-        start: "top 0%",
-        end: "bottom top",
-        scrub: true,              // smooth animation
-        pin: true,                // keeps page1 fixed
-        pinSpacing: false
-    }
-});
 
 
 gsap.from("#about .hero-text", {
@@ -151,31 +140,7 @@ gsap.from(".skills-group", {
     }
 });
 
-// gsap.from(".skills-group.middle", {
-//     y: 100,
-//     opacity: 0,
-//     duration: 0.3,
-//     scrollTrigger: {
-//         trigger: ".skills-group.middle",
-//         start: "top 80%",
-//         end: "bottom 130%",
-//         // markers: true,
-//         scrub: 2,
-//     }
-// });
 
-// gsap.from(".skills-group.right", {
-//     x: 100,
-//     opacity: 0,
-//     duration: 0.3,
-//     scrollTrigger: {
-//         trigger: ".skills-group.right",
-//         start: "top 80%",
-//        end: "bottom 130%",
-//         // markers: true,
-//         scrub: 2,
-//     }
-// });
 
 
 // Projects Section Animations
